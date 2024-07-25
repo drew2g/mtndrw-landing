@@ -1,10 +1,14 @@
 import Image from "next/image";
 import ItemCard from "./components/ItemCard";
+import {
+  generatePrivateCarousel,
+  generatePublicCarousel,
+} from "./utils/generateCarousels";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col items-center">
+      <div className="flex min-w-screen flex-col items-center">
         <Image
           src="/mtndrw.png"
           alt="Vercel Logo"
@@ -18,7 +22,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="text-center p-4">
+      {/* <div className="text-center p-4">
         <p className="p-2">Private Projects</p>
 
         <div className="grid grid-cols-2 gap-2">
@@ -33,29 +37,9 @@ export default function Home() {
             src="/lit_logo.png"
           ></ItemCard>
         </div>
-      </div>
-
-      <div className="text-center p-4">
-        <p className="p-2">Public Projects</p>
-
-        <div className="grid grid-cols-2 gap-2">
-          <ItemCard
-            title="FluffNPowder"
-            description="Our dog grooming business site. Which we should probably get back to doing"
-            src="/fluffnpowder_logo.png"
-          ></ItemCard>
-          <ItemCard
-            title="V3SA: DaPP (Decentralized Payment Protocol)"
-            description="Peer-to-Peer Payroll Protocol on Solana Blockchain. Pay someone over time, or when they are good noodles!"
-            src="/dapp_logo.png"
-          ></ItemCard>
-          <ItemCard
-            title="Dev Landing page"
-            description="This page actually"
-            src="/mtndrw.png"
-          ></ItemCard>
-        </div>
-      </div>
+      </div> */}
+      {generatePrivateCarousel()}
+      {generatePublicCarousel()}
     </main>
   );
 }

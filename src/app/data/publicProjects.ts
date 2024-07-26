@@ -19,5 +19,6 @@ export const publicProjects: PublicProject[] = [
     description: "This page actually",
     src: "/mtndrw.png",
     link: "https://mtndrw.com",
+    githubLink: "https://github.com/drew2g/mtndrw-landing",
   },
 ];

@@ -5,7 +5,6 @@ import { publicProjects } from "../data/publicProjects";
 export function generatePrivateCarousel() {
   return (
     <>
-      <p className="p-2">Private Projects</p>
       <ItemCardCarousel
         itemCards={privateProjects}
         title="Private Projects"
@@ -17,7 +16,6 @@ export function generatePrivateCarousel() {
 export function generatePublicCarousel() {
   return (
     <>
-      <p className="p-2">Public Projects</p>
       <ItemCardCarousel
         itemCards={publicProjects}
         title="Public Projects"

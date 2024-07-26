@@ -1,22 +1,22 @@
-type ItemCardCarousel = {
+interface ItemCardCarousel {
   title: string;
   itemCards: ItemCard[] | [];
-};
+}
 
-type Project = {
+type PrivateProject = {
   title: string;
   description: string;
   src: string;
 };
 
-type PrivateProject = Project;
-
-type PublicProject = Project & {
+type PublicProject = PrivateProject & {
   link: string;
   githubLink?: string;
 };
 
-type ItemCard = (PrivateProject | PublicProject) & {
+type Project = PrivateProject | PublicProject;
+
+type ItemCard = Project & {
   disabled?: boolean;
 };
 

@@ -8,7 +8,7 @@ import {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex min-w-screen flex-col items-center">
+      <div className="flex flex-col items-center">
         <Image
           src="/mtndrw.png"
           alt="Vercel Logo"
@@ -38,8 +38,8 @@ export default function Home() {
           ></ItemCard>
         </div>
       </div> */}
-      {generatePrivateCarousel()}
       {generatePublicCarousel()}
+      {generatePrivateCarousel()}
     </main>
   );
 }

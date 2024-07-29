@@ -15,8 +15,8 @@ const ItemCardCarousel: React.FC<ItemCardCarousel> = ({ itemCards, title }) => {
         <div className="carousel carousel-center bg-neutral rounded-box max-w-full space-x-4 p-4">
           {itemCards.map((proj: PrivateProject | PublicProject) => {
             return (
-              <div className="carousel-item">
-                <ItemCard itemCard={proj} key={proj.title}></ItemCard>
+              <div key={proj.title} className="carousel-item">
+                <ItemCard itemCard={proj} key={"IC-" + proj.title}></ItemCard>
                 {/* <img src={proj.src} className="rounded-box" /> */}
               </div>
             );

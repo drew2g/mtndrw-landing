@@ -18,7 +18,7 @@ export default function Home() {
           priority
         />
         <p className="text-center pt-4">
-          You made it to Andrew Padilla's developer landing page. YIPPIE!
+          You made it to Andrew Padilla&apos;s developer landing page. YIPPIE!
         </p>
       </div>
 

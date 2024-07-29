@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ItemCard, Project } from "../types";
 
 interface ItemCardProps {
@@ -9,7 +10,7 @@ const ItemCard: React.FC<ItemCardProps> = ({ itemCard }) => {
     <div className="text-black">
       <button className="card bg-base-100 w-96 shadow-xl hover:bg-gray-800/80 hover:text-white">
         <figure>
-          <img src={itemCard.src} alt={itemCard.title} />
+          <Image src={itemCard.src} alt={itemCard.title}></Image>
         </figure>
         <div className="card-body">
           <h2 className="card-title justify-center">{itemCard.title}</h2>
